@@ -205,23 +205,6 @@ DIN A4, landscape with location and doc. field</description>
 </library>
 <library name="00Connector">
 <packages>
-<package name="22-23-2051">
-<description>.100" (2.54mm) Center Header - 5 Pin</description>
-<wire x1="-6.35" y1="3.175" x2="6.35" y2="3.175" width="0.254" layer="21"/>
-<wire x1="6.35" y1="3.175" x2="6.35" y2="1.27" width="0.254" layer="21"/>
-<wire x1="6.35" y1="1.27" x2="6.35" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="6.35" y1="-3.175" x2="-6.35" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-6.35" y1="-3.175" x2="-6.35" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-6.35" y1="1.27" x2="-6.35" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-6.35" y1="1.27" x2="6.35" y2="1.27" width="0.254" layer="21"/>
-<pad name="1" x="-5.08" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="2" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="3" x="0" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="4" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="5" x="5.08" y="0" drill="1" shape="long" rot="R90"/>
-<text x="-6.35" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
-<text x="-6.35" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
-</package>
 <package name="200MIL_10X">
 <description>10-pin 200mil header 1.3mm drill</description>
 <pad name="1" x="-22.86" y="0" drill="1.3" shape="long" rot="R90" thermals="no"/>
@@ -241,19 +224,35 @@ DIN A4, landscape with location and doc. field</description>
 <pad name="9" x="17.78" y="0" drill="1.3" shape="long" rot="R90"/>
 <pad name="10" x="22.86" y="0" drill="1.3" shape="long" rot="R90"/>
 </package>
+<package name="200MIL_5X">
+<description>5-pin 200mil header 1.3mm drill</description>
+<pad name="1" x="-10.16" y="0" drill="1.3" shape="long" rot="R90" thermals="no"/>
+<pad name="2" x="-5.08" y="0" drill="1.3" shape="long" rot="R90"/>
+<pad name="3" x="0" y="0" drill="1.3" shape="long" rot="R90"/>
+<pad name="4" x="5.08" y="0" drill="1.3" shape="long" rot="R90"/>
+<pad name="5" x="10.16" y="0" drill="1.3" shape="long" rot="R90"/>
+<wire x1="-12.7" y1="5" x2="12.7" y2="5" width="0.254" layer="21"/>
+<wire x1="12.7" y1="5" x2="12.7" y2="-5" width="0.254" layer="21"/>
+<wire x1="12.7" y1="-5" x2="-12.7" y2="-5" width="0.254" layer="21"/>
+<wire x1="-12.7" y1="-5" x2="-12.7" y2="5" width="0.254" layer="21"/>
+<text x="0" y="3" size="1.016" layer="25" ratio="10" align="center">&gt;NAME</text>
+<text x="0" y="-3" size="1.016" layer="27" ratio="10" align="center">&gt;VALUE</text>
+</package>
+<package name="100MIL_5X">
+<wire x1="-6.35" y1="1.778" x2="6.35" y2="1.778" width="0.15" layer="21"/>
+<wire x1="6.35" y1="1.778" x2="6.35" y2="-1.778" width="0.15" layer="21"/>
+<wire x1="6.35" y1="-1.778" x2="-6.35" y2="-1.778" width="0.15" layer="21"/>
+<wire x1="-6.35" y1="-1.778" x2="-6.35" y2="1.778" width="0.15" layer="21"/>
+<pad name="1" x="-5.08" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="0" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="4" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="5" x="5.08" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-6.35" y="1.905" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-6.35" y="-1.905" size="1.016" layer="27" ratio="10" align="top-left">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
-<symbol name="MV">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-<symbol name="M">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
 <symbol name="CON_10X">
 <wire x1="-1.27" y1="-1.905" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="1.27" x2="24.13" y2="1.27" width="0.254" layer="94"/>
@@ -293,37 +292,31 @@ DIN A4, landscape with location and doc. field</description>
 <pin name="P$9" x="20.32" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
 <pin name="P$10" x="22.86" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
+<symbol name="CON_5X">
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="11.43" y1="-1.905" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="11.43" y1="-1.905" x2="11.43" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="11.43" y2="1.27" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="2.54" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="5.08" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="7.62" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="10.16" y="0" radius="0.635" width="0.254" layer="94"/>
+<text x="-1.27" y="0" size="1.27" layer="95" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="6.35" y="1.27" size="1.27" layer="96" align="bottom-center">&gt;VALUE</text>
+<text x="-0.635" y="-1.27" size="1.016" layer="95" align="center">1</text>
+<pin name="1" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="5.08" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="4" x="7.62" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="10.16" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<text x="1.905" y="-1.27" size="1.016" layer="95" align="center">2</text>
+<text x="4.445" y="-1.27" size="1.016" layer="95" align="center">3</text>
+<text x="6.985" y="-1.27" size="1.016" layer="95" align="center">4</text>
+<text x="9.525" y="-1.27" size="1.016" layer="95" align="center">5</text>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="22-23-2051" prefix="X">
-<description>.100" (2.54mm) Center Header - 5 Pin</description>
-<gates>
-<gate name="-1" symbol="MV" x="0" y="5.08" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="M" x="0" y="2.54" addlevel="always" swaplevel="1"/>
-<gate name="-3" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-4" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
-<gate name="-5" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="22-23-2051">
-<connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-<connect gate="-5" pin="S" pad="5"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="MOLEX" constant="no"/>
-<attribute name="MPN" value="22-23-2051" constant="no"/>
-<attribute name="OC_FARNELL" value="1462952" constant="no"/>
-<attribute name="OC_NEWARK" value="38C9178" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="CON_10X" prefix="CON">
 <description>10-pin header</description>
 <gates>
@@ -342,6 +335,38 @@ DIN A4, landscape with location and doc. field</description>
 <connect gate="G$1" pin="P$7" pad="7"/>
 <connect gate="G$1" pin="P$8" pad="8"/>
 <connect gate="G$1" pin="P$9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CON_5X" prefix="CON">
+<description>5-pin header</description>
+<gates>
+<gate name="G$1" symbol="CON_5X" x="0" y="0"/>
+</gates>
+<devices>
+<device name="200MIL" package="200MIL_5X">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="100MIL" package="100MIL_5X">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2083,7 +2108,6 @@ PEC11-4xxxF-Sxxxx</description>
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
-<part name="X1" library="00Connector" deviceset="22-23-2051" device=""/>
 <part name="Q1" library="00Mosfet" deviceset="N-PWR-MOSFET" device="LFPAK" value="N-PWR-MOSFETLFPAK"/>
 <part name="Q2" library="00Mosfet" deviceset="N-PWR-MOSFET" device="LFPAK" value="N-PWR-MOSFETLFPAK"/>
 <part name="IC2" library="00Logic" deviceset="LM5111" device=""/>
@@ -2193,6 +2217,7 @@ PEC11-4xxxF-Sxxxx</description>
 <part name="GND38" library="00Supply" deviceset="GND" device=""/>
 <part name="GND39" library="00Supply" deviceset="GND" device=""/>
 <part name="GND40" library="00Supply" deviceset="GND" device=""/>
+<part name="CON1" library="00Connector" deviceset="CON_5X" device="100MIL"/>
 </parts>
 <sheets>
 <sheet>
@@ -2200,11 +2225,6 @@ PEC11-4xxxF-Sxxxx</description>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="X1" gate="-1" x="119.38" y="30.48"/>
-<instance part="X1" gate="-2" x="119.38" y="27.94"/>
-<instance part="X1" gate="-3" x="119.38" y="25.4"/>
-<instance part="X1" gate="-4" x="119.38" y="22.86"/>
-<instance part="X1" gate="-5" x="119.38" y="20.32"/>
 <instance part="Q1" gate="G$1" x="218.44" y="66.04"/>
 <instance part="Q2" gate="G$1" x="218.44" y="93.98"/>
 <instance part="IC2" gate="G$1" x="180.34" y="81.28"/>
@@ -2261,6 +2281,7 @@ PEC11-4xxxF-Sxxxx</description>
 <instance part="GND36" gate="1" x="114.3" y="124.46" rot="MR0"/>
 <instance part="P+5" gate="1" x="200.66" y="162.56" rot="MR0"/>
 <instance part="P+8" gate="1" x="200.66" y="104.14" rot="MR0"/>
+<instance part="CON1" gate="G$1" x="119.38" y="30.48" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -2335,10 +2356,10 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="43.18" y1="20.32" x2="43.18" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-3" pin="S"/>
 <wire x1="116.84" y1="25.4" x2="114.3" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="25.4" x2="114.3" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="CON1" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -2469,7 +2490,6 @@ PEC11-4xxxF-Sxxxx</description>
 <junction x="50.8" y="157.48"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-2" pin="S"/>
 <wire x1="116.84" y1="27.94" x2="114.3" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="27.94" x2="114.3" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -2478,6 +2498,7 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="109.22" y1="45.72" x2="114.3" y2="45.72" width="0.1524" layer="91"/>
 <junction x="114.3" y="45.72"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
+<pinref part="CON1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC6" gate="G$1" pin="VDD"/>
@@ -2586,29 +2607,15 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="228.6" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="PGD" class="0">
-<segment>
-<pinref part="X1" gate="-4" pin="S"/>
-<wire x1="116.84" y1="22.86" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
-<label x="99.06" y="22.86" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="PGC" class="0">
-<segment>
-<pinref part="X1" gate="-5" pin="S"/>
-<wire x1="116.84" y1="20.32" x2="96.52" y2="20.32" width="0.1524" layer="91"/>
-<label x="99.06" y="20.32" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="!MCLR!" class="0">
 <segment>
-<pinref part="X1" gate="-1" pin="S"/>
 <wire x1="116.84" y1="30.48" x2="109.22" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="30.48" x2="96.52" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="33.02" x2="109.22" y2="30.48" width="0.1524" layer="91"/>
 <junction x="109.22" y="30.48"/>
 <label x="99.06" y="30.48" size="1.778" layer="95"/>
+<pinref part="CON1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC6" gate="G$1" pin="VPP/!MCLR!/RA3"/>
@@ -2652,46 +2659,18 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="144.78" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="ENC2_PB" class="0">
 <segment>
 <pinref part="IC6" gate="G$1" pin="RC2"/>
 <wire x1="91.44" y1="93.98" x2="111.76" y2="93.98" width="0.1524" layer="91"/>
 <label x="96.52" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="ENC2_B" class="0">
 <segment>
 <pinref part="IC6" gate="G$1" pin="RA5"/>
 <wire x1="50.8" y1="106.68" x2="27.94" y2="106.68" width="0.1524" layer="91"/>
 <label x="30.48" y="106.68" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="IC6" gate="G$1" pin="RA4"/>
-<wire x1="50.8" y1="104.14" x2="27.94" y2="104.14" width="0.1524" layer="91"/>
-<label x="30.48" y="104.14" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="IC6" gate="G$1" pin="RC5"/>
-<wire x1="50.8" y1="99.06" x2="27.94" y2="99.06" width="0.1524" layer="91"/>
-<label x="30.48" y="99.06" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="IC6" gate="G$1" pin="RC4"/>
-<wire x1="50.8" y1="96.52" x2="27.94" y2="96.52" width="0.1524" layer="91"/>
-<label x="30.48" y="96.52" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$26" class="0">
-<segment>
-<pinref part="IC6" gate="G$1" pin="RC3"/>
-<wire x1="50.8" y1="93.98" x2="27.94" y2="93.98" width="0.1524" layer="91"/>
-<label x="30.48" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PGC/OUT1" class="0">
@@ -2704,6 +2683,11 @@ PEC11-4xxxF-Sxxxx</description>
 <pinref part="IC4" gate="G$1" pin="IN_A"/>
 <wire x1="162.56" y1="142.24" x2="142.24" y2="142.24" width="0.1524" layer="91"/>
 <label x="144.78" y="142.24" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="116.84" y1="20.32" x2="96.52" y2="20.32" width="0.1524" layer="91"/>
+<label x="99.06" y="20.32" size="1.778" layer="95"/>
+<pinref part="CON1" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -2721,6 +2705,11 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="91.44" y1="106.68" x2="114.3" y2="106.68" width="0.1524" layer="91"/>
 <label x="96.52" y="106.68" size="1.778" layer="95"/>
 <pinref part="Q5" gate="G$1" pin="G"/>
+</segment>
+<segment>
+<wire x1="116.84" y1="22.86" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
+<label x="99.06" y="22.86" size="1.778" layer="95"/>
+<pinref part="CON1" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -2755,6 +2744,34 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="58.42" y1="149.86" x2="58.42" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="142.24" x2="50.8" y2="142.24" width="0.1524" layer="91"/>
 <junction x="50.8" y="142.24"/>
+</segment>
+</net>
+<net name="ENC1_PB" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="RC5"/>
+<wire x1="50.8" y1="99.06" x2="27.94" y2="99.06" width="0.1524" layer="91"/>
+<label x="30.48" y="99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC1_A" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="RA4"/>
+<wire x1="50.8" y1="104.14" x2="27.94" y2="104.14" width="0.1524" layer="91"/>
+<label x="30.48" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC1_B" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="RC4"/>
+<wire x1="50.8" y1="96.52" x2="27.94" y2="96.52" width="0.1524" layer="91"/>
+<label x="30.48" y="96.52" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC2_A" class="0">
+<segment>
+<pinref part="IC6" gate="G$1" pin="RC3"/>
+<wire x1="50.8" y1="93.98" x2="27.94" y2="93.98" width="0.1524" layer="91"/>
+<label x="30.48" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -2972,37 +2989,30 @@ PEC11-4xxxF-Sxxxx</description>
 </net>
 <net name="ENC2_B" class="0">
 <segment>
-<pinref part="IC5" gate="G$1" pin="6Y"/>
-<wire x1="208.28" y1="68.58" x2="220.98" y2="68.58" width="0.1524" layer="91"/>
-<label x="210.82" y="68.58" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="2Y"/>
+<wire x1="182.88" y1="66.04" x2="172.72" y2="66.04" width="0.1524" layer="91"/>
+<label x="172.72" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC2_A" class="0">
+<net name="ENC1_A" class="0">
 <segment>
 <pinref part="IC5" gate="G$1" pin="5Y"/>
 <wire x1="208.28" y1="63.5" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
 <label x="210.82" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC1_PB" class="0">
+<net name="ENC2_A" class="0">
 <segment>
 <pinref part="IC5" gate="G$1" pin="1Y"/>
 <wire x1="182.88" y1="71.12" x2="172.72" y2="71.12" width="0.1524" layer="91"/>
 <label x="172.72" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC1_B" class="0">
+<net name="ENC2_PB" class="0">
 <segment>
 <pinref part="IC5" gate="G$1" pin="3Y"/>
 <wire x1="182.88" y1="60.96" x2="172.72" y2="60.96" width="0.1524" layer="91"/>
 <label x="172.72" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="ENC2_PB" class="0">
-<segment>
-<pinref part="IC5" gate="G$1" pin="4Y"/>
-<wire x1="208.28" y1="58.42" x2="220.98" y2="58.42" width="0.1524" layer="91"/>
-<label x="210.82" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -3059,9 +3069,9 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="30.48" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="G$1" pin="2A"/>
-<wire x1="182.88" y1="68.58" x2="172.72" y2="68.58" width="0.1524" layer="91"/>
-<label x="172.72" y="68.58" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="5A"/>
+<wire x1="208.28" y1="66.04" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
+<label x="210.82" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENC1B" class="0">
@@ -3075,9 +3085,9 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="68.58" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="G$1" pin="3A"/>
-<wire x1="182.88" y1="63.5" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
-<label x="172.72" y="63.5" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="6A"/>
+<wire x1="208.28" y1="71.12" x2="220.98" y2="71.12" width="0.1524" layer="91"/>
+<label x="210.82" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENC1PB" class="0">
@@ -3091,9 +3101,9 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="127" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="G$1" pin="1A"/>
-<wire x1="182.88" y1="73.66" x2="172.72" y2="73.66" width="0.1524" layer="91"/>
-<label x="172.72" y="73.66" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="4A"/>
+<wire x1="208.28" y1="60.96" x2="220.98" y2="60.96" width="0.1524" layer="91"/>
+<label x="210.82" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -3118,9 +3128,9 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="30.48" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="G$1" pin="5A"/>
-<wire x1="208.28" y1="66.04" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
-<label x="210.82" y="66.04" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="1A"/>
+<wire x1="182.88" y1="73.66" x2="172.72" y2="73.66" width="0.1524" layer="91"/>
+<label x="172.72" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENC2B" class="0">
@@ -3134,9 +3144,9 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="68.58" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="G$1" pin="6A"/>
-<wire x1="208.28" y1="71.12" x2="220.98" y2="71.12" width="0.1524" layer="91"/>
-<label x="210.82" y="71.12" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="2A"/>
+<wire x1="182.88" y1="68.58" x2="172.72" y2="68.58" width="0.1524" layer="91"/>
+<label x="172.72" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENC2PB" class="0">
@@ -3150,16 +3160,9 @@ PEC11-4xxxF-Sxxxx</description>
 <label x="127" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC5" gate="G$1" pin="4A"/>
-<wire x1="208.28" y1="60.96" x2="220.98" y2="60.96" width="0.1524" layer="91"/>
-<label x="210.82" y="60.96" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="ENC1_A" class="0">
-<segment>
-<pinref part="IC5" gate="G$1" pin="2Y"/>
-<wire x1="182.88" y1="66.04" x2="172.72" y2="66.04" width="0.1524" layer="91"/>
-<label x="172.72" y="66.04" size="1.778" layer="95"/>
+<pinref part="IC5" gate="G$1" pin="3A"/>
+<wire x1="182.88" y1="63.5" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
+<label x="172.72" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!ENABLE!" class="0">
@@ -3233,6 +3236,20 @@ PEC11-4xxxF-Sxxxx</description>
 <junction x="50.8" y="81.28"/>
 <wire x1="66.04" y1="73.66" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
 <junction x="50.8" y="73.66"/>
+</segment>
+</net>
+<net name="ENC1_B" class="0">
+<segment>
+<pinref part="IC5" gate="G$1" pin="6Y"/>
+<wire x1="208.28" y1="68.58" x2="220.98" y2="68.58" width="0.1524" layer="91"/>
+<label x="210.82" y="68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC1_PB" class="0">
+<segment>
+<pinref part="IC5" gate="G$1" pin="4Y"/>
+<wire x1="208.28" y1="58.42" x2="220.98" y2="58.42" width="0.1524" layer="91"/>
+<label x="210.82" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

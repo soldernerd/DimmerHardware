@@ -1,7 +1,7 @@
 [Eagle]
-Version="07 04 00"
+Version="07 06 00"
 Platform="Windows"
-Serial="712DDA057C-LSR-WLM-1SS"
+Serial="712DDA057C-LS-WLM-1CS"
 Globals="Globals"
 Desktop="Desktop"
 
@@ -371,7 +371,7 @@ UsedLibrary="C:/EAGLE-7.3.0/lbr/zilog.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="1916 -4 3835 1176"
+Loc="0 0 1919 1136"
 State=1
 Number=0
 
