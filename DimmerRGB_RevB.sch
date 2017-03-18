@@ -1180,7 +1180,8 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 </package>
 </packages>
 <symbols>
-<symbol name="LM2931_ADJ">
+<symbol name="LM2936">
+<description>Ultra-Low Quiescent Current LDO Voltage Regulator</description>
 <wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
@@ -1188,29 +1189,30 @@ Source: www.farnell.com/datasheets/247.pdf</description>
 <text x="-10.16" y="6.35" size="1.778" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="VIN" x="12.7" y="2.54" length="short" direction="pas" rot="R180"/>
-<pin name="ADJ" x="-12.7" y="-5.08" length="short" direction="out"/>
+<pin name="NC" x="-12.7" y="-5.08" length="short" direction="out"/>
 <pin name="GND@2" x="-12.7" y="-2.54" length="short" direction="pas"/>
 <pin name="GND@1" x="-12.7" y="0" length="short" direction="pas"/>
-<pin name="!EN!" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
+<pin name="SD" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
 <pin name="GND@4" x="12.7" y="0" length="short" direction="out" rot="R180"/>
 <pin name="GND@3" x="12.7" y="-2.54" length="short" direction="out" rot="R180"/>
 <pin name="VOUT" x="-12.7" y="2.54" length="short" direction="out"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LM2931_ADJ" prefix="IC">
+<deviceset name="LM2936">
+<description>Ultra-Low Quiescent Current LDO Voltage Regulator</description>
 <gates>
-<gate name="G$1" symbol="LM2931_ADJ" x="0" y="0"/>
+<gate name="G$1" symbol="LM2936" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOIC8">
 <connects>
-<connect gate="G$1" pin="!EN!" pad="5"/>
-<connect gate="G$1" pin="ADJ" pad="4"/>
 <connect gate="G$1" pin="GND@1" pad="2"/>
 <connect gate="G$1" pin="GND@2" pad="3"/>
 <connect gate="G$1" pin="GND@3" pad="6"/>
 <connect gate="G$1" pin="GND@4" pad="7"/>
+<connect gate="G$1" pin="NC" pad="4"/>
+<connect gate="G$1" pin="SD" pad="5"/>
 <connect gate="G$1" pin="VIN" pad="8"/>
 <connect gate="G$1" pin="VOUT" pad="1"/>
 </connects>
@@ -2110,8 +2112,8 @@ PEC11-4xxxF-Sxxxx</description>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="Q5" library="00Mosfet" deviceset="N-PWR-MOSFET" device="LFPAK" value="N-PWR-MOSFETLFPAK"/>
 <part name="Q4" library="00Mosfet" deviceset="N-PWR-MOSFET" device="LFPAK" value="N-PWR-MOSFETLFPAK"/>
-<part name="IC4" library="00Logic" deviceset="LM5111" device=""/>
-<part name="IC2" library="00VoltageRegulator" deviceset="LM2931_ADJ" device=""/>
+<part name="IC4" library="00Logic" deviceset="LM5111" device="" value="LM5111-1M"/>
+<part name="IC2" library="00VoltageRegulator" deviceset="LM2936" device=""/>
 <part name="C1" library="00Capacitor" deviceset="C_POLARIZED" device="SMC_C" value="33u"/>
 <part name="C10" library="00Capacitor" deviceset="C" device="C0805" value="100n"/>
 <part name="GND9" library="00Supply" deviceset="GND" device=""/>
@@ -2124,7 +2126,7 @@ PEC11-4xxxF-Sxxxx</description>
 <part name="GND18" library="00Supply" deviceset="GND" device=""/>
 <part name="GND20" library="00Supply" deviceset="GND" device=""/>
 <part name="Q3" library="00Mosfet" deviceset="N-PWR-MOSFET" device="LFPAK" value="N-PWR-MOSFETLFPAK"/>
-<part name="IC3" library="00Logic" deviceset="LM5111" device=""/>
+<part name="IC3" library="00Logic" deviceset="LM5111" device="" value="LM5111-1M"/>
 <part name="C9" library="00Capacitor" deviceset="C" device="C0805" value="100n"/>
 <part name="GND24" library="00Supply" deviceset="GND" device=""/>
 <part name="GND17" library="00Supply" deviceset="GND" device=""/>
@@ -2172,10 +2174,10 @@ PEC11-4xxxF-Sxxxx</description>
 <part name="GND35" library="00Supply" deviceset="GND" device=""/>
 <part name="GND29" library="00Supply" deviceset="GND" device=""/>
 <part name="CON1" library="00Connector" deviceset="CON_10X" device="200MIL"/>
-<part name="C7" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="1500u"/>
-<part name="C5" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="1500u"/>
-<part name="C4" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="1500u"/>
-<part name="C3" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="1500u"/>
+<part name="C7" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="330u 35V"/>
+<part name="C5" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="330u 35V"/>
+<part name="C4" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="330u 35V"/>
+<part name="C3" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="330u 35V"/>
 <part name="IC1" library="00PIC" deviceset="PIC16F18325" device=""/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="Q2" library="00Mosfet" deviceset="N-PWR-MOSFET" device="LFPAK"/>
@@ -2197,15 +2199,15 @@ PEC11-4xxxF-Sxxxx</description>
 <part name="LED1" library="00Display" deviceset="LED" device="0805"/>
 <part name="R1" library="00Resistor" deviceset="RESISTOR" device="R0805" value="1k"/>
 <part name="GND1" library="00Supply" deviceset="GND" device=""/>
-<part name="Q1" library="00Mosfet" deviceset="N-FET" device="SOT23"/>
+<part name="Q1" library="00Mosfet" deviceset="N-FET" device="SOT23" value="NX3008NBK"/>
 <part name="GND15" library="00Supply" deviceset="GND" device=""/>
 <part name="GND6" library="00Supply" deviceset="GND" device=""/>
-<part name="R5" library="00Resistor" deviceset="RESISTOR" device="R0805" value="33k"/>
+<part name="R5" library="00Resistor" deviceset="RESISTOR" device="R0805" value="22k"/>
 <part name="P+6" library="00Supply" deviceset="+12V" device=""/>
-<part name="R2" library="00Resistor" deviceset="RESISTOR" device="R0805" value="33k"/>
-<part name="R3" library="00Resistor" deviceset="RESISTOR" device="R0805" value="10k"/>
+<part name="R2" library="00Resistor" deviceset="RESISTOR" device="R0805" value="N/A"/>
+<part name="R3" library="00Resistor" deviceset="RESISTOR" device="R0805" value="N/A"/>
 <part name="GND5" library="00Supply" deviceset="GND" device=""/>
-<part name="C6" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="1500u"/>
+<part name="C6" library="00Capacitor" deviceset="C_POLARIZED" device="10MM" value="330u 35V"/>
 <part name="GND12" library="00Supply" deviceset="GND" device=""/>
 <part name="P+7" library="00Supply" deviceset="+5V" device=""/>
 <part name="P+8" library="00Supply" deviceset="+5V" device=""/>
@@ -2217,7 +2219,7 @@ PEC11-4xxxF-Sxxxx</description>
 <part name="GND39" library="00Supply" deviceset="GND" device=""/>
 <part name="GND38" library="00Supply" deviceset="GND" device=""/>
 <part name="GND32" library="00Supply" deviceset="GND" device=""/>
-<part name="CON2" library="00Connector" deviceset="CON_5X" device="100MIL"/>
+<part name="ICSP" library="00Connector" deviceset="CON_5X" device="100MIL"/>
 <part name="C8" library="00Capacitor" deviceset="C" device="C0805" value="100n"/>
 <part name="GND16" library="00Supply" deviceset="GND" device=""/>
 <part name="C20" library="00Capacitor" deviceset="C" device="C0805" value="100n"/>
@@ -2299,7 +2301,7 @@ PEC11-4xxxF-Sxxxx</description>
 <instance part="GND12" gate="1" x="114.3" y="124.46" rot="MR0"/>
 <instance part="P+7" gate="1" x="200.66" y="162.56" rot="MR0"/>
 <instance part="P+8" gate="1" x="200.66" y="104.14" rot="MR0"/>
-<instance part="CON2" gate="G$1" x="119.38" y="30.48" rot="R270"/>
+<instance part="ICSP" gate="G$1" x="119.38" y="30.48" rot="R270"/>
 <instance part="C8" gate="G$1" x="124.46" y="139.7"/>
 <instance part="GND16" gate="1" x="124.46" y="124.46" rot="MR0"/>
 <instance part="C11" gate="G$1" x="205.74" y="124.46"/>
@@ -2383,7 +2385,7 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="116.84" y1="25.4" x2="114.3" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="25.4" x2="114.3" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-<pinref part="CON2" gate="G$1" pin="3"/>
+<pinref part="ICSP" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
@@ -2540,7 +2542,7 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="109.22" y1="45.72" x2="114.3" y2="45.72" width="0.1524" layer="91"/>
 <junction x="114.3" y="45.72"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<pinref part="CON2" gate="G$1" pin="2"/>
+<pinref part="ICSP" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VDD"/>
@@ -2665,7 +2667,7 @@ PEC11-4xxxF-Sxxxx</description>
 <wire x1="109.22" y1="33.02" x2="109.22" y2="30.48" width="0.1524" layer="91"/>
 <junction x="109.22" y="30.48"/>
 <label x="99.06" y="30.48" size="1.778" layer="95"/>
-<pinref part="CON2" gate="G$1" pin="1"/>
+<pinref part="ICSP" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VPP/!MCLR!/RA3"/>
@@ -2737,7 +2739,7 @@ PEC11-4xxxF-Sxxxx</description>
 <segment>
 <wire x1="116.84" y1="20.32" x2="96.52" y2="20.32" width="0.1524" layer="91"/>
 <label x="99.06" y="20.32" size="1.778" layer="95"/>
-<pinref part="CON2" gate="G$1" pin="5"/>
+<pinref part="ICSP" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -2759,7 +2761,7 @@ PEC11-4xxxF-Sxxxx</description>
 <segment>
 <wire x1="116.84" y1="22.86" x2="96.52" y2="22.86" width="0.1524" layer="91"/>
 <label x="99.06" y="22.86" size="1.778" layer="95"/>
-<pinref part="CON2" gate="G$1" pin="4"/>
+<pinref part="ICSP" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -2771,7 +2773,7 @@ PEC11-4xxxF-Sxxxx</description>
 </net>
 <net name="!ENABLE!" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="!EN!"/>
+<pinref part="IC2" gate="G$1" pin="SD"/>
 <wire x1="91.44" y1="149.86" x2="132.08" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="132.08" y1="149.86" x2="132.08" y2="152.4" width="0.1524" layer="91"/>
@@ -2788,7 +2790,7 @@ PEC11-4xxxF-Sxxxx</description>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="50.8" y1="144.78" x2="50.8" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="ADJ"/>
+<pinref part="IC2" gate="G$1" pin="NC"/>
 <wire x1="50.8" y1="142.24" x2="50.8" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="149.86" x2="58.42" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="149.86" x2="58.42" y2="142.24" width="0.1524" layer="91"/>
